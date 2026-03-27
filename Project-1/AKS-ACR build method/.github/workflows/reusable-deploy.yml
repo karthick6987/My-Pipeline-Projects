@@ -32,7 +32,7 @@ jobs:
           working_directory: infra
 
       - name: Security Scan (checkov)
-        uses: bridgecrewio/checkov-action@master
+        uses: bridgecrewio/checkov-action@v12.0.0
 
       - name: Terraform Apply
         run: terraform apply -auto-approve -var-file=${{ inputs.environment }}.tfvars
